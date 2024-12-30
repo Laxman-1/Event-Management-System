@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto; /* Adjust height for content */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container {
+    padding: 20px;
+    width: 50%; /* Form takes half of the page width */
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%; /* Adjust width to full container width */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right-link {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 14px;
+}
+
+.right-link:hover {
+    text-decoration: underline;
+}
+
+.image-container {
+    display: none; /* Hide image container on small screens */
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .image-container {
+        display: flex;
+        width: 50%; /* Image container takes the other half of the page width */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-container img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px; /* Optional: adds rounded corners to the image */
+    }
+}

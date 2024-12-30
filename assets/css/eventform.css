@@ -1,0 +1,60 @@
+/* Basic styling for the card container */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Aligns cards with space in between */
+  margin: 20px 0;
+}
+
+/* Card styling */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: calc(33.33% - 20px); /* Makes the card larger and more rectangular with space between */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+}
+
+.card-content {
+  flex-grow: 1;
+  padding: 15px 0;
+}
+
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Adjust spacing between cards */
+.card-container .card + .card {
+  margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: calc(50% - 10px); /* Makes the card wider on smaller screens */
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}

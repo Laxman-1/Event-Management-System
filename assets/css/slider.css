@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 0;
+}
+
+.container1 {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.h1 {
+    text-align: center;
+    color: #333;
+}
+
+.hall-slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hall-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    max-width: 100%;
+    padding: 20px;
+    gap: 15px;
+}
+
+.hall-card {
+    flex: 0 0 20%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hall-card:hover {
+    transform: scale(1.05);
+}
+
+.hall-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.hall-info {
+    text-align: center;
+}
+
+.hall-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.hall-price {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.hall-details span {
+    display: block;
+    font-size: 14px;
+    color: #999;
+}
+
+.hall-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.arrow-left,
+.arrow-right {
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .hall-card {
+        flex: 0 0 45%;
+    }
+}
+

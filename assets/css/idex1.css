@@ -1,0 +1,169 @@
+/* General Layout */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px; /* Increased space between rows */
+}
+
+/* Card Container */
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 800px;
+    height: auto;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 20px; /* More rounded corners for a softer feel */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    overflow: hidden;
+    transform: perspective(1px) translateZ(0); /* Improves performance of hover effect */
+}
+
+/* Colorful Backgrounds for Cards */
+.card:nth-child(1) {
+    background: linear-gradient(145deg, #f79d84, #ff6b6b); /* Soft peach to coral */
+}
+
+.card:nth-child(2) {
+    background: linear-gradient(145deg, #6bc5d2, #4ecdc4); /* Aqua to turquoise */
+}
+
+.card:nth-child(3) {
+    background: linear-gradient(145deg, #f9e79f, #f39c12); /* Light yellow to orange */
+}
+
+.card:nth-child(4) {
+    background: linear-gradient(145deg, #a29bfe, #6c5ce7); /* Light lavender to deep violet */
+}
+
+.card:nth-child(5) {
+    background: linear-gradient(145deg, #fd79a8, #e84393); /* Light pink to vibrant magenta */
+}
+
+.card:hover {
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.25);
+    transform: translateY(-10px) rotate(-1deg); /* Slight rotation for a dynamic hover effect */
+}
+
+/* Card Image */
+.card-img-top {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-bottom: 5px solid rgba(255, 255, 255, 0.3); /* Semi-transparent white border */
+    transition: transform 0.5s ease, filter 0.5s ease; /* Longer, smoother animation */
+    filter: grayscale(20%); /* Slightly desaturated image for a modern look */
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.1) rotate(2deg); /* Adds rotation to the image on hover */
+    filter: grayscale(0%); /* Restores original color on hover */
+}
+
+/* Card Body */
+.card-body {
+    flex: 1;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+    border-radius: 0 0 20px 20px;
+}
+
+/* Action Buttons */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    gap: 10px; /* Adds space between the buttons */
+}
+
+.view, .book {
+    display: inline-block;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px; /* Fully rounded buttons for a fun, modern look */
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.view {
+    background-color: #2ecc71; /* Fresh green for the view button */
+}
+
+.book {
+    background-color: #e74c3c; /* Bold red for the book button */
+}
+
+.view:hover, .book:hover {
+    transform: translateY(-5px) scale(1.05); /* More pronounced hover effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.view:hover {
+    background-color: #27ae60; /* Darker green on hover */
+}
+
+.book:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+/* Star Rating */
+.star {
+    color: #ddd;
+    cursor: pointer;
+    font-size: 24px; /* Larger stars for better visibility */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth animation for hover effect */
+}
+
+.star.filled {
+    color: #ffd700; /* Bright gold for filled stars */
+}
+
+.star:hover, .star:hover ~ .star {
+    transform: scale(1.2); /* Slightly larger stars on hover */
+    color: #ff6b6b; /* Color change to match the first card */
+}
+
+/* Rating Text */
+.rating-text {
+    display: block;
+    margin-top: 8px;
+    font-size: 16px; /* Larger text for better readability */
+    color: #555;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.5px; /* Adds spacing between letters for a modern touch */
+}
+
+/* Optional Animated Elements */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.card {
+    animation: float 3s ease-in-out infinite; /* Cards gently float up and down */
+}
+
+.actions .view, .actions .book {
+    animation: float 1.5s ease-in-out infinite alternate; /* Buttons gently bounce */
+}
